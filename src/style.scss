@@ -30,6 +30,7 @@ body {
   height: 100vh;
 
   @include flexConstructor;
+
   justify-content: center;
   align-items: center;
 
@@ -46,12 +47,11 @@ body {
     @include gridConstructor(1fr 1fr, 1fr, $gap: 40px);
 
     .board-container {
-
       @include gridConstructor(1fr, auto 1fr, $gap: 10px);
 
       .board-header {
-
         @include flexConstructor($f-dir: row);
+
         justify-content: space-between;
         align-items: center;
       }
@@ -76,9 +76,8 @@ body {
 
       form {
         @include gridConstructor(1fr, repeat(3, auto), 20px);
-        
-        align-content: start;
 
+        align-content: start;
         > * {
           padding: 10px;
         }
