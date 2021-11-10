@@ -1,18 +1,24 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Leaderboard
 
-> One paragraph statement about the project.
+> Simple project where the list of players with the highest scores are presented.
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+This simple app allows you to see the list of gamers with the highest scores in the game.
 
 ## Built With
 
 - Major languages
+  - HTML/CSS
+  - SCSS
+  - JavaScript
 - Frameworks
+  - n/a
 - Technologies used
+  - webpack
+  - gitflow
 
 ## Live Demo
 
@@ -28,28 +34,23 @@ Additional description about the project and its features.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+  - Node.js is to be installed on your machine
+  - Basic knowladge of JavaScript, CSS, HTML
 
 ### Setup
-
-### Install
+  - Install npm locally
+  - Clone this repo locally usign the below comand:
+      git clone https://github.com/Hope1226/To-Do-List.git
+  - Install webpack and webpack -cli via follwoing comand:
+      npm install webpack webpack -cli --save-dev
 
 ### Usage
-
-### Run tests
-
-### Deployment
-
-
+  - Oly files in src are to be modified
+  - Run nmp webpack to bundle the modules
 
 ## Authors
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
+👤 **Umidjon Ustabaev (Hope)**
 
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)

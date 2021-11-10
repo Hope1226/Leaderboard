@@ -28,11 +28,12 @@ html {
 
 body {
   height: 100vh;
+
   @include flexConstructor;
   justify-content: center;
   align-items: center;
 
-  header{
+  header {
     justify-self: flex-start;
     align-self: flex-start;
     padding: 30px;
@@ -41,28 +42,29 @@ body {
   .app-container {
     width: 80%;
     max-width: 1000px;
+
     @include gridConstructor(1fr 1fr, 1fr, $gap: 40px);
 
     .board-container {
+
       @include gridConstructor(1fr, auto 1fr, $gap: 10px);
 
       .board-header {
+
         @include flexConstructor($f-dir: row);
         justify-content: space-between;
         align-items: center;
-        button {
-          padding: 5px;
-        }
       }
 
       .scores-container {
         height: 500px;
         max-height: 500px;
         border: 1px solid black;
+
         @include flexConstructor;
-        
         .scores {
           @include gridConstructor(auto 1fr, 1fr, 10px);
+
           padding: 10px;
           background: rgb(163, 163, 163);
         }
@@ -74,6 +76,7 @@ body {
 
       form {
         @include gridConstructor(1fr, repeat(3, auto), 20px);
+        
         align-content: start;
 
         > * {

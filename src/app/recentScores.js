@@ -17,7 +17,6 @@ const renderScoreBoard = () => {
   name.textContent = 'Player\'s name';
   const score = document.createElement('span');
   score.textContent = '100';
-  
   scoreTest.appendChild(name);
   scoreTest.appendChild(score);
   scoresContainer.appendChild(scoreTest);
@@ -27,6 +26,6 @@ const renderScoreBoard = () => {
   boardContainer.appendChild(scoresContainer);
 
   return boardContainer;
-}
+};
 
 export default renderScoreBoard;

@@ -27,8 +27,8 @@ module.exports = {
         test: /\.scss$/i,
 
         use: [
-          'style-loader', 
-          'css-loader', 
+          'style-loader',
+          'css-loader',
           'sass-loader',
         ],
 
@@ -42,11 +42,10 @@ module.exports = {
       },
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: 'html-loader',
       },
 
     ],
 
   },
-  
 };
