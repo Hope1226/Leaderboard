@@ -20,9 +20,9 @@ This simple app allows you to see the list of gamers with the highest scores in 
   - webpack
   - gitflow
 
-## Live Demo
+<!-- ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://livedemo.com) -->
 
 
 ## Getting Started
@@ -52,9 +52,8 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Umidjon Ustabaev (Hope)**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Hope1226](https://github.com/Hope1226)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/umidjon-ustabaev-03b92b11a/)
 
 ## 🤝 Contributing
 
