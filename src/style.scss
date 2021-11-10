@@ -79,7 +79,7 @@ body {
         @include gridConstructor(1fr, repeat(3, auto), 20px);
 
         align-content: start;
-        
+
         > * {
           padding: 10px;
         }
