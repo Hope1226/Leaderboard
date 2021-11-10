@@ -1,0 +1,94 @@
+@mixin gridConstructor($cols, $rows, $gap: 10px) {
+  display: grid;
+  grid-template-columns: $cols;
+  grid-template-rows: $rows;
+  grid-gap: $gap;
+}
+
+@mixin flexConstructor($f-dir: column) {
+  display: flex;
+  flex-direction: $f-dir;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+
+  @include flexConstructor;
+
+  justify-content: center;
+  align-items: center;
+
+  header {
+    justify-self: flex-start;
+    align-self: flex-start;
+    padding: 30px;
+  }
+
+  .app-container {
+    width: 80%;
+    max-width: 1000px;
+
+    @include gridConstructor(1fr 1fr, 1fr, $gap: 40px);
+
+    .board-container {
+      @include gridConstructor(1fr, auto 1fr, $gap: 10px);
+
+      .board-header {
+        @include flexConstructor($f-dir: row);
+
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .scores-container {
+        height: 500px;
+        max-height: 500px;
+        border: 1px solid black;
+
+        @include flexConstructor;
+
+        .scores {
+          @include gridConstructor(auto 1fr, 1fr, 10px);
+
+          padding: 10px;
+          background: rgb(163, 163, 163);
+        }
+      }
+    }
+
+    .add-score-section {
+      @include gridConstructor(1fr, auto 1fr);
+
+      form {
+        @include gridConstructor(1fr, repeat(3, auto), 20px);
+
+        align-content: start;
+
+        > * {
+          padding: 10px;
+        }
+
+        button {
+          justify-self: end;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
