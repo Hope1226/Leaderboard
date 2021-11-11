@@ -1,14 +1,42 @@
-const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
-const gameID = 'Zl4d7IVkemOTTVg2fUdz';
-const apiUrl = `${api}games/${gameID}/scores/`;
+const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
 
-const getData = async () => {
-  const response = await fetch(apiUrl);
-  return response.json();
+
+export const createGame = async () => {
+  let gameId;
+  await fetch(api, {
+    method: 'POST',
+    body: JSON.stringify({
+      "name": "My game"
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+  .then(response => response.json())
+  .then(data => gameId = data.result.split(' ')[3]);
+  
+  window.localStorage.setItem('loacalId', gameId);
+  return gameId;
 };
 
-export const displayData = async () => {
-  const data = await getData();
+export const addScore = async (userNmae, score, id) => {
+  await fetch(`${api}/${id}/scores/`, {
+    method: 'POST',
+    body: JSON.stringify({
+      'user': userNmae,
+      'score': score
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+}
+
+
+
+export const displayData = async (id) => {
+  const response = await fetch(`${api}/${id}/scores`);
+  const data = await response.json();
   const scoreList = data.result;
   const scoreBoard = document.createElement('div');
   scoreBoard.classList.add('scores-container');
