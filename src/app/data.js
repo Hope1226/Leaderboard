@@ -1,6 +1,5 @@
 const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
 
-
 export const createGame = async () => {
   let gameId;
   await fetch(api, {
@@ -14,19 +13,19 @@ export const createGame = async () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      gameId = data.result.split(' ')[3];
-      return gameId;
+      gameId = data.result.split(' ');
+      return gameId[3];
     });
   window.localStorage.setItem('loacalId', gameId);
   return gameId;
 };
 
-export const addScore = async (userNmae, score, id) => {
+export const addScore = async (userNmae, userScore, id) => {
   await fetch(`${api}/${id}/scores/`, {
     method: 'POST',
     body: JSON.stringify({
-      user : userNmae,
-      score : score,
+      user: userNmae,
+      score: userScore,
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
