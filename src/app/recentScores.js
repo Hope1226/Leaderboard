@@ -9,14 +9,14 @@ const renderScoreBoard = () => {
   refreshBnt.innerHTML = 'Refresh';
   refreshBnt.type = 'button';
   refreshBnt.id = 'refreshBtn';
-  const waitingBoard = document.createElement('div');
-  waitingBoard.id = 'waiting';
-  waitingBoard.classList.add('scores-container');
-  waitingBoard.innerHTML = 'Loading....'
+  const scoreBoard = document.createElement('div');
+  scoreBoard.id = 'board';
+  scoreBoard.classList.add('scores-container');
+  scoreBoard.innerHTML = 'Refresh...';
   header.appendChild(heading);
   header.appendChild(refreshBnt);
   boardContainer.appendChild(header);
-  boardContainer.appendChild(waitingBoard);
+  boardContainer.appendChild(scoreBoard);
 
   return boardContainer;
 };

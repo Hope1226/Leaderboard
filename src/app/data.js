@@ -34,7 +34,7 @@ export const addScore = async (userNmae, score, id) => {
 
 
 
-export const displayData = async (id) => {
+export const displayData = async (id, conntainer) => {
   const response = await fetch(`${api}/${id}/scores`);
   const data = await response.json();
   const scoreList = data.result;
@@ -44,9 +44,7 @@ export const displayData = async (id) => {
     let userName = obj.user;
     let userScore = obj.score;
     
-    scoreBoard.innerHTML += `
+    conntainer.innerHTML += `
     <div class="scores"><p>${userName}:</p><span>${userScore}</span></div>`
   });
-
-  return scoreBoard;
 };

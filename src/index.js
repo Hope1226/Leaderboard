@@ -15,7 +15,7 @@ else {
 const appContainer = document.querySelector('.app-container');
 appContainer.appendChild(renderScoreBoard());
 appContainer.appendChild(createForm());
-const board = document.querySelector('.board-container');
+const board = document.querySelector('#board');
 const waitingBoard = document.querySelector('#waiting');
 const form = document.querySelector('#add-score-form');
 const nameInt = document.querySelector('#name-input');
@@ -29,9 +29,8 @@ form.addEventListener('submit', (event) => {
 })
 
 const populateBoard = async () => {
-  const boardScores = await data.displayData(gameID);
-  board.appendChild(boardScores);
-  waitingBoard.style.display = 'none';
+  board.innerHTML = '';
+  await data.displayData(gameID, board);;
 };
 
 refreshBtn.addEventListener('click', () => {
