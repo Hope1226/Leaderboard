@@ -9,21 +9,14 @@ const renderScoreBoard = () => {
   refreshBnt.innerHTML = 'Refresh';
   refreshBnt.type = 'button';
   refreshBnt.id = 'refreshBtn';
-  const scoresContainer = document.createElement('div');
-  scoresContainer.classList.add('scores-container');
-  const scoreTest = document.createElement('div');
-  scoreTest.classList.add('scores');
-  const name = document.createElement('p');
-  name.textContent = 'Player\'s name';
-  const score = document.createElement('span');
-  score.textContent = '100';
-  scoreTest.appendChild(name);
-  scoreTest.appendChild(score);
-  scoresContainer.appendChild(scoreTest);
+  const scoreBoard = document.createElement('div');
+  scoreBoard.id = 'board';
+  scoreBoard.classList.add('scores-container');
+  scoreBoard.innerHTML = 'Refresh...';
   header.appendChild(heading);
   header.appendChild(refreshBnt);
   boardContainer.appendChild(header);
-  boardContainer.appendChild(scoresContainer);
+  boardContainer.appendChild(scoreBoard);
 
   return boardContainer;
 };

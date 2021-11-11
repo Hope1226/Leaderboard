@@ -60,6 +60,7 @@ body {
         height: 500px;
         max-height: 500px;
         border: 1px solid black;
+        overflow-y: scroll;
 
         @include flexConstructor;
 
@@ -68,6 +69,10 @@ body {
 
           padding: 10px;
           background: rgb(163, 163, 163);
+        }
+
+        .scores:nth-child(odd) {
+          background: white;
         }
       }
     }
