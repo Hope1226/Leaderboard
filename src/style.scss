@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Road+Rage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Road+Rage&display=swap');
+$boardFont: 'Gochi Hand', cursive;
+
 @mixin gridConstructor($cols, $rows, $gap: 10px) {
   display: grid;
   grid-template-columns: $cols;
@@ -26,6 +30,12 @@ html {
   margin: 0;
 }
 
+::placeholder {
+  font-family: $boardFont;
+  color: white;
+  font-size: 20px;
+}
+
 body {
   height: 100vh;
 
@@ -33,18 +43,45 @@ body {
 
   justify-content: center;
   align-items: center;
+  background: white url(./assets/images/wall-bg.jpeg) no-repeat;
+  background-size: cover;
+  color: white;
 
   header {
     justify-self: flex-start;
     align-self: flex-start;
     padding: 30px;
+
+    .hero-text {
+      font-family: 'Road Rage', cursive;
+      font-size: 100px;
+      font-weight: 900;
+      color: rgb(111, 111, 111);
+    }
   }
 
   .app-container {
     width: 80%;
-    max-width: 1000px;
+    max-width: 787px;
+    height: 478px;
+    padding: 50px;
+    background: url(./assets/images/green-board.jpg) no-repeat;
+    background-size: cover;
+    font-family: $boardFont;
+    font-size: 30px;
+    font-weight: 300;
 
     @include gridConstructor(1fr 1fr, 1fr, $gap: 40px);
+
+    button {
+      padding: 5px;
+      border-radius: 50px;
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      font-family: $boardFont;
+      font-size: 16px;
+    }
 
     .board-container {
       @include gridConstructor(1fr, auto 1fr, $gap: 10px);
@@ -57,9 +94,8 @@ body {
       }
 
       .scores-container {
-        height: 500px;
-        max-height: 500px;
-        border: 1px solid black;
+        height: 100%;
+        max-height: 300px;
         overflow-y: scroll;
 
         @include flexConstructor;
@@ -68,11 +104,8 @@ body {
           @include gridConstructor(auto 1fr, 1fr, 10px);
 
           padding: 10px;
-          background: rgb(163, 163, 163);
-        }
-
-        .scores:nth-child(odd) {
-          background: white;
+          text-decoration: underline;
+          line-height: 30px;
         }
       }
     }
@@ -89,9 +122,21 @@ body {
           padding: 10px;
         }
 
+        input {
+          border: none;
+          border-bottom: 1px solid white;
+          background: transparent;
+          font-family: $boardFont;
+          color: white;
+          font-size: 20px;
+        }
+
+        input:focus {
+          outline: none;
+        }
+
         button {
           justify-self: end;
-          padding: 5px;
         }
       }
     }
