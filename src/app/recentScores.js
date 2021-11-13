@@ -6,13 +6,13 @@ const renderScoreBoard = () => {
   const heading = document.createElement('h2');
   heading.innerHTML = 'Recent Scores';
   const refreshBnt = document.createElement('button');
-  refreshBnt.innerHTML = 'Refresh';
   refreshBnt.type = 'button';
   refreshBnt.id = 'refreshBtn';
   const scoreBoard = document.createElement('div');
   scoreBoard.id = 'board';
   scoreBoard.classList.add('scores-container');
-  scoreBoard.innerHTML = 'Refresh...';
+  scoreBoard.innerHTML = '<a href="#name-input" class="plus-circle"></a>';
+  scoreBoard.classList.add('no-refresh');
   header.appendChild(heading);
   header.appendChild(refreshBnt);
   boardContainer.appendChild(header);
