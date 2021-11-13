@@ -42,12 +42,7 @@ body {
 
   justify-content: center;
   align-items: center;
-  background:
-    radial-gradient(
-      ellipse farthest-corner at center top,
-     #5cdb95 0%,
-     #8ee4af 100%
-    );
+  background: radial-gradient(ellipse farthest-corner at center top,#5cdb95 0% #8ee4af 100%);
   background-size: cover;
   color: white;
 
