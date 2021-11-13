@@ -25,7 +25,7 @@ form.addEventListener('submit', (event) => {
   data.addScore(nameInt.value, scoreInt.value, gameID);
   refreshBtn.classList.add('button-cliked');
   setTimeout(() => {
-    refreshBtn.classList.remove('button-cliked')
+    refreshBtn.classList.remove('button-cliked');
   }, 2000);
   form.reset();
 });
@@ -40,6 +40,6 @@ refreshBtn.addEventListener('click', () => {
   board.classList.remove('no-refresh');
   refreshBtn.classList.add('button-cliked');
   setTimeout(() => {
-    refreshBtn.classList.remove('button-cliked')
+    refreshBtn.classList.remove('button-cliked');
   }, 2000);
 });
